@@ -31,7 +31,7 @@ async def chat(channel, message=None, tts=False, embed=None):
             msg = await client.send_message(channel, message=message, tts=tts, embed=embed)
             return msg
         except discord.errors.Forbidden:
-            ep('The bot is not allowed to send messages to this channel')
+            print('The bot is not allowed to send messages to this channel')
             return None
         
 @client.event
