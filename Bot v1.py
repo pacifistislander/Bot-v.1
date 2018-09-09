@@ -3,7 +3,7 @@ import asyncio
 import time
 import random
 
-Client = discord.Client() 
+client = discord.Client() 
 
 if True: #this lets you fold the code is supported editors to take less room
     presences = [ # add any texts you want here. This is valid syntax, as long as you end the list with the ] properly
