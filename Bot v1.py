@@ -20,7 +20,7 @@ async def status_task():
     global presenceChangeTime
     while True:
         newPresence = discord.Game(name=random.choice(presences))
-        await client.change_presence(newPresence)
+        await client.change_presence(game=newPresence)
         await asyncio.sleep(presenceChangeTime)
         
 async def chat(channel, message=None, tts=False, embed=None):
