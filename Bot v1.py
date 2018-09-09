@@ -16,6 +16,7 @@ if True: #this lets you fold the code is supported editors to take less room
     presenceChangeTime = 20 # increased from 10 because 10 seconds is too short
 
 async def status_task():
+    global client
     global presences
     global presenceChangeTime
     while True:
