@@ -70,13 +70,67 @@ async def on_message(message):
         await client.send_message(message.channel, " ```wtf do you want``` ")
     if message.content == "Despacito":  
         await client.send_message(message.channel, " ```Ew``` ")
+    if message.content == "Who is the sweetest Dutch boy?":
+        await client.send_message(message.channel, "Obviously Niek!")
+    if message.content == "Who is the most tired person ever?"):
+        await client.send_message(message.channel, "Xochipilli...")
+    if message.content == "Who is blessed?"):
+        await client.send_message(message.channel, "You are blessed! Yeehaw :)")
     if message.content == "Hello":  
         await client.send_message(message.channel, "Go away no one likes you")
     if message.content.startswith('Shrek'):
         await client.kick(message.author)
 
 
+    #I'm hoping to make a 'help' function, so let's see what happens. - xochipilli
+    #Commented out so it doesn't mess with the bot.
+    if message.content == "Help":
+        await client.send_message(message.channel, "No thanks :)")
+    
+    #I'm not sure if the below will work, because I'm adapting it from another source, but we'll see.
+    #class CommandHandler:
 
+    # create the CommandHandler object and pass it the client
+    #ch = CommandHandler(client)
+    
+    # constructor
+    #def __init__(self, client):
+    #    self.client = client
+    #    self.commands = []
+
+    #def add_command(self, command):
+    #    self.commands.append(command)
+
+    #def command_handler(self, message):
+    #    for command in self.commands:
+    #        if message.content.startswith(command['s!']):
+    #            args = message.content.split(' ')
+    #            if args[0] == command['s!']:
+    #                args.pop(0)
+    #                if command['args_num'] == 0:
+    #                    return self.client.send_message(message.channel,str(command['function'](message, self.client, args)))
+    #                    break
+    #                else:
+    #                    if len(args) >= command['args_num']:
+    #                        return self.client.send_message(message.channel,str(command['function'](message, self.client, args)))
+    #                        break
+    #                    else:
+    #                        return self.client.send_message(message.channel, 'command "{}" requires {} argument(s) "{}"'.format(command['trigger'], command['args_num'], ', '.join(command['args_name'])))
+    #                        break
+    #            else:
+    #                break      
+    
+    #def help_function(message, client, args):
+    #try:
+    #    return 'Hello {}, Argument One: {}'.format(message.author, args[0])
+    #except Exception as e:
+    #    return e
+    #ch.add_command({
+    #'s!': 'help',
+    #'function': help_function,
+    #'args_num': 1,
+    #'args_name': ['string'],
+    #'description': 'Will respond with helpful information.'
     
 
 client.loop.create_task(status_task())
