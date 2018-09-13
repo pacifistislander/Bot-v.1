@@ -74,8 +74,10 @@ async def on_message(message):
         await client.send_message(message.channel, "tell it again")
     if message.content == "Indeed":  
         await client.send_message(message.channel, "Good meme")
-    if message.content == "":  
+    if message.content == "Press F to pay respects":  
         await client.send_message(message.channel, "F")
+    if message.content == "Press C to pay respects":
+        await client.send_message(message.channel, "C")
     if message.content == "This is so sad":  
         await client.send_message(message.channel, ";-;")
     if message.content == "Alexa":  
